@@ -1,5 +1,0 @@
-- name: {{+title+}}
-  apt: name={{'{{+ item +}}'}} state={{+present+}}
-  with_items:
-    - {{+item+}}
-

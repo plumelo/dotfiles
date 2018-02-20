@@ -1,10 +1,11 @@
 unlet! g:skip_defaults_vim
 silent! source $VIMRUNTIME/defaults.vim
 
+set shell=/bin/sh
+
 augroup MyVimrc
   autocmd!
 augroup END
-
 command! -nargs=* AutoCmd autocmd MyVimrc <args>
 
 if has('vim_starting')
@@ -13,13 +14,12 @@ if has('vim_starting')
   \ | echomsg 'startuptime: ' . reltimestr(g:startuptime)
 endif
 
-if has('vim_starting') && &encoding !=# 'utf-8'
-  set encoding=utf-8
-endif
-
-set shell=sh
-
-runtime! plugins.vim
-runtime! theme.vim
-runtime! settings.vim
+runtime! options.vim
+runtime! autocmd.vim
+" source ~/.vim/commands.vim
 runtime! mappings.vim
+runtime theme.vim
+
+for s:f in glob('~/.vim/p-*.vim', 0, 1)
+  execute 'source ' . s:f
+endfor

@@ -27,6 +27,7 @@ cnoremap <C-e> <End>
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
 nnoremap <Leader>s :%s//<left>
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>:redraw<CR>
 command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!

@@ -40,6 +40,7 @@ in {
         
       # editors
       atom
+      editorconfig-core-c
       vim_plum
       vim-vint
       neovim

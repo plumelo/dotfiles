@@ -163,7 +163,7 @@ do_update() {
 }
 
 do_install() {
-  git clone --quiet "git@github.com:$repo" "$destdir" || return
+  git clone --quiet "https://github.com/$repo" "$destdir" || return
   (
   cd "$destdir"
   )

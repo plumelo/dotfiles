@@ -12,7 +12,7 @@ set splitbelow
 set splitright
 set switchbuf=useopen,usetab
 set shada='250,\"100,:100,n~/.config/nvim/shada
-set wildignore+=*/node_modules/*,*/.git/*,*/.hg/*,*/.svn/*,*/.vagrant/*
+set wildignore+=*/node_modules/*,*/.git/*,*/.hg/*,*/.svn/*,*/.vagrant/*,*/bower_components/*
 set complete=.,w,b,u,t,i,k
 set completeopt=menuone
 set omnifunc=syntaxcomplete#Complete
@@ -24,11 +24,11 @@ set hlsearch|nohlsearch
 set sidescrolloff=5
 set sidescroll=1
 set expandtab
-set tabstop=2
 set shiftwidth=2
+set softtabstop=-1
 set shiftround
 set inccommand=nosplit
 set updatetime=750
 set clipboard^=unnamedplus,unnamed
 set list listchars=tab:▸\ ,eol:¬,trail:~,space:·,extends:>,precedes:<,nbsp:•
-set statusline=%f%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)
+set statusline=%f%m%r%h%w%=%{fugitive#head()}\ (%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)

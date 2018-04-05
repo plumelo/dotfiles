@@ -34,12 +34,8 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-nnoremap <silent> gh :tabprev<cr>
-nnoremap <silent> gl :tabnext<cr>
-nnoremap <silent> gH :exec 'tabmove ' . max([tabpagenr() - 2, 0])<cr>
-nnoremap <silent> gL :exec 'tabmove ' . min([tabpagenr(), tabpagenr('$')])<cr>
-nnoremap <silent> g0 :tabfirst<cr>
-nnoremap <silent> g$ :tablast<cr>
+nnoremap <space><space> :tabnew %<CR>
+nnoremap <space>q :tabclose<CR>
 
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>:redraw<CR>
 command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!

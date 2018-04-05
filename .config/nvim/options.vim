@@ -24,6 +24,7 @@ set hlsearch|nohlsearch
 set sidescrolloff=5
 set sidescroll=1
 set expandtab
+set tabstop=2
 set shiftwidth=2
 set softtabstop=-1
 set shiftround

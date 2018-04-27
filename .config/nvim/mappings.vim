@@ -8,7 +8,7 @@ vnoremap < <gv
 nnoremap <C-s> :update<CR>
 inoremap <C-s> <Esc>:update<CR>
 nnoremap <C-q> :bwipeout<CR>
-nnoremap ,q :bdelete<CR>
+nnoremap <Space>x :bdelete<CR>
 nnoremap <silent><expr> q winnr('$') != 1 ? ':<C-u>close<CR>' : ""
 xnoremap <C-s> <C-C>:<C-u>update<CR>
 nnoremap <expr> 0 virtcol('.') - 1 <= indent('.') && col('.') > 1 ? '0' : '_'
@@ -36,9 +36,6 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <space><space> :tabnew %<CR>
 nnoremap <space>q :tabclose<CR>
-
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>:redraw<CR>
-command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 
 function! s:VSetSearch()
   let l:temp = @@

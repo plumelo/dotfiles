@@ -1,7 +1,5 @@
 .netrwhist
-pack/plugins/opt/*
-!pack/plugins/opt/zoom
-pack/plugins/start/*
+pack/
 session
 swap
 shada

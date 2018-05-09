@@ -29,6 +29,5 @@ set softtabstop=-1
 set shiftround
 set inccommand=nosplit
 set updatetime=750
-set clipboard^=unnamedplus,unnamed
 set list listchars=tab:▸\ ,eol:¬,trail:~,space:·,extends:>,precedes:<,nbsp:•
 set statusline=%f%m%r%h%w%=%{fugitive#head()}\ (%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)

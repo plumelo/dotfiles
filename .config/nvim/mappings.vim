@@ -36,6 +36,12 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <space><space> :tabnew %<CR>
 nnoremap <space>q :tabclose<CR>
+vnoremap <Space>y "+y
+nnoremap <Space>p "+p
+vnoremap <Space>p "+p
+nnoremap <Space>P "+P
+vnoremap <Space>P "+P
+inoremap <C-v> <ESC>"+gPa
 
 function! s:VSetSearch()
   let l:temp = @@

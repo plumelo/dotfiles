@@ -13,6 +13,7 @@ in {
       p7zip
       unrar
       gnumake
+      nerdfonts
 
       # audio
       python35Packages.mps-youtube

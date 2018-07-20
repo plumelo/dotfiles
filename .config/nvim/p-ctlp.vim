@@ -5,7 +5,7 @@ let g:ctrlp_use_caching = 0
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_open_multi = '1v'
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden --ignore .git -g ""'
 nnoremap <C-p> :packadd ctrlp.vim<CR>:CtrlP<CR>
 nnoremap <Bs> :packadd ctrlp.vim<CR>:CtrlPBuffer<CR>
 nnoremap <C-_> :packadd ctrlp.vim<CR>:CtrlPMRUFiles<CR>

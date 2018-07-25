@@ -10,7 +10,8 @@
 !.config/fish/functions/dotfiles.fish
 !.config/fish/functions/codeclimate.fish
 .config/fish/completions/
-.config/fish/conf.d/
+.config/fish/conf.d/*
+!.config/fish/conf.d/plumelo_*.fish
 .config/fish/fishd.*
 .config/fisherman/*
 
@@ -37,6 +38,7 @@
 /.cache/
 /.compose-cache/
 /.local/share/*
+/.tmux/
 
 #Nix
 /.nix-defexpr/

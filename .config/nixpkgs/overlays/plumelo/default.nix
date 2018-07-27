@@ -8,12 +8,16 @@ in {
     name  = "plumelo";
     paths = [
       #general
-      ag
+      (native ag)
       ripgrep
       p7zip
       unrar
       gnumake
       nerdfonts
+
+      # monitoring
+      python27Packages.glances
+      htop
 
       # audio
       python35Packages.mps-youtube
@@ -23,7 +27,7 @@ in {
       cava
 
       # office
-      libreoffice-fresh
+      #libreoffice-fresh
       unoconv
 
       # browsers
@@ -39,7 +43,7 @@ in {
       libnotify
       (weechat.override {configure = {availablePlugins, ...}: {
         plugins = with availablePlugins; [
-          (python.withPackages (ps: with ps; [ 
+          (python.withPackages (ps: with ps; [
             websocket_client
           ]))
         ];};
@@ -51,28 +55,28 @@ in {
       # editors
       atom
       (native editorconfig-core-c)
-      (native vim_plum)
+      (native vim)
       vim-vint
-      neovim
+      (native neovim)
       python27Packages.neovim
       python36Packages.neovim
       python27Packages.yamllint
 
       # langs
-      (native nodejs-8_x) 
+      (native nodejs-8_x)
       (native ruby)
 
       # misc
-      keepassx-community
+      (native keepassxc)
       taskwarrior
       transmission_gtk
       stress
       glmark2
       
       # git
-      gitAndTools.tig
-      git-lfs
-      (native git-keyring)
+      (native gitAndTools.tig)
+      (native git-lfs)
+      (native git)
       gitkraken
 
       # configuration management
@@ -85,6 +89,11 @@ in {
 
       #files
       ranger
+
+      # sway
+      i3blocks
+      polybar
+      pavucontrol
     ];
   };
 }

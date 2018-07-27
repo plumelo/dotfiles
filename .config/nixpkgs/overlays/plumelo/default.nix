@@ -8,6 +8,7 @@ in {
       #general
       (native ag)
       ripgrep
+      fd
       p7zip
       (native unzip)
       (native zip)
@@ -67,6 +68,13 @@ in {
       python36Packages.neovim
       python27Packages.yamllint
 
+      # terminals
+      termite
+
+      # file managers
+      vifm
+      ranger
+
       # langs
       (native nodejs-8_x)
       (native ruby)
@@ -77,13 +85,13 @@ in {
       transmission_gtk
       stress
       glmark2
-      
+
       # git
       (native gitAndTools.tig)
       (native git-lfs)
       (native git)
       gitkraken
-
+      gitAndTools.diff-so-fancy
       # configuration management
       vagrant_2
       redir

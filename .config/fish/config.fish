@@ -20,3 +20,17 @@ function dotfiles
   git -c core.excludesFile=~/.dotignore --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $argv
 end
 
+alias nv='nvim'
+alias v='vim'
+alias vu='vagrant up'
+alias vp='vagrant provision'
+alias vrp='vagrant reload --provision'
+alias vd='vagrant destroy'
+alias vs='vagrant ssh'
+alias vh='vagrant halt'
+alias ds='dotfiles status'
+alias da='dotfiles add'
+alias df='dotfiles diff'
+alias dc='dotfiles commit'
+alias dp='dotfiles pull'
+alias dP='dotfiles push'

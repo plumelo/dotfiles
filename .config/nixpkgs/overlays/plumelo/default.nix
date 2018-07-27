@@ -83,7 +83,7 @@ in {
       vagrant
       redir
       bridge-utils
-      ansible_2_4
+      ansible_2_6
       avocode
       distrobuilder
 

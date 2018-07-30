@@ -12,6 +12,7 @@ in {
       ripgrep
       p7zip
       unrar
+      fd
       gnumake
       nerdfonts
 
@@ -88,9 +89,12 @@ in {
       distrobuilder
 
       #files
+      filezilla
       ranger
+      vifm
 
       # sway
+      termite
       i3blocks
       polybar
       pavucontrol

@@ -9,8 +9,8 @@ nnoremap <C-s> :update<CR>
 inoremap <C-s> <Esc>:update<CR>
 xnoremap <C-s> <C-C>:<C-u>update<CR>
 nnoremap <expr> 0 virtcol('.') - 1 <= indent('.') && col('.') > 1 ? '0' : '_'
-nnoremap <silent> [- :vertical resize +1<CR>
-nnoremap <silent> ]= :vertical resize -1<CR>
+nnoremap <silent> <M--> :vertical resize +1<CR>
+nnoremap <silent> <M-=> :vertical resize -1<CR>
 vnoremap . :normal .<CR>
 nnoremap ,w :set wrap!<cr>
 nnoremap <Leader>w :%s/\s\+$//e<CR>

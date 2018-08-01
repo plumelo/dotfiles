@@ -6,3 +6,4 @@ endif
 
 set background=dark
 silent! colorscheme base16-onedark
+highlight Comment cterm=italic gui=italic

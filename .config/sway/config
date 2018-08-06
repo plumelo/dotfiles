@@ -9,8 +9,9 @@ set $menu dmenu_run
 
 # Output configuration
 output * bg ~/.config/sway/wallpaper.jpg fill
+output "Goldstar Company Ltd LG ULTRAWIDE 0x0000B7AA" bg ~/.config/sway/wallpaper_2560x1080.jpg fill
 output eDP-1 scale 1
-
+output "Samsung Electric Company SAMSUNG 0x00000100" scale 2
 # input
 input "2:14:ETPS/2_Elantech_Touchpad" {
   dwt enabled
@@ -95,8 +96,8 @@ bindsym $mod+Shift+minus move scratchpad #move to scratchpad
 bindsym $mod+minus scratchpad show #show scratchpade window
 
 # Audio
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle # mute sound
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +10%

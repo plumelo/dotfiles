@@ -62,3 +62,13 @@
 
 # dconf
 /.config/dconf/user
+# conf
+/.gnome
+/.config/Slack
+/.config/chromium
+/.config/QtProject.conf
+.LFCache
+/.config/GitKraken
+/.gitkraken/
+/.config/VirtualBox
+/Android

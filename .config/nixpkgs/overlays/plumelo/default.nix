@@ -81,7 +81,7 @@ in {
       gitkraken
 
       # configuration management
-      vagrant
+      vagrant_2
       redir
       bridge-utils
       ansible_2_6

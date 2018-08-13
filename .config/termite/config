@@ -1,6 +1,6 @@
 [options]
 # font=Iosevka \Nerd \Font \Complete \Mono 11
-font = Monospace 10
+font = Ubuntu Mono 10
 allow_bold = true
 
 [colors]

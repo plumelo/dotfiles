@@ -5,5 +5,5 @@ if has('termguicolors')
 endif
 
 set background=dark
-silent! colorscheme base16-onedark
+silent! colorscheme onehalfdark
 highlight Comment cterm=italic gui=italic

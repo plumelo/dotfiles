@@ -8,7 +8,6 @@ in {
       #general
       (native ag)
       ripgrep
-      fd
       p7zip
       (native unzip)
       (native zip)
@@ -44,6 +43,7 @@ in {
       epiphany
 
       # communication
+      neomutt
       slack
       skypeforlinux
       libnotify
@@ -67,17 +67,21 @@ in {
       python27Packages.neovim
       python36Packages.neovim
       python27Packages.yamllint
+      python27Packages.flake8
+      python36Packages.flake8
 
       # terminals
       termite
 
       # file managers
+      filezilla
       vifm
       ranger
 
       # langs
       (native nodejs-8_x)
       (native ruby)
+      yarn
 
       # misc
       (native keepassxc)
@@ -99,11 +103,6 @@ in {
       ansible_2_6
       avocode
       distrobuilder
-
-      #files
-      filezilla
-      ranger
-      vifm
 
       # sway
       termite

@@ -1,7 +1,5 @@
 self: super:
-
 let 
-  buildEnv = self.buildEnv;
   native = self.plumNative;
 in {
   plumelo = with self; buildEnv {

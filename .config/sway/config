@@ -103,6 +103,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +10%
 
 bindsym $mod+Control+l exec grim /tmp/lock.png &&  mogrify -scale 10% -scale 1000% /tmp/lock.png && swaylock -i /tmp/lock.png
+bindsym Print exec grim ~/screenshot.png
 
 # Resizing containers:
 mode "resize" {

@@ -11,6 +11,7 @@ in {
       p7zip
       unrar
       fd
+      xclip
       gnumake
       nerdfonts
 

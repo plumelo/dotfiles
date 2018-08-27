@@ -14,6 +14,7 @@ in {
       xclip
       gnumake
       nerdfonts
+      ntfs3g
 
       # monitoring
       python27Packages.glances
@@ -27,7 +28,7 @@ in {
       cava
 
       # office
-      #libreoffice-fresh
+      libreoffice-fresh
       unoconv
 
       # browsers

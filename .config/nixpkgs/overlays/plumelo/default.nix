@@ -9,6 +9,7 @@ in {
       (native ag)
       ripgrep
       p7zip
+      unzip
       unrar
       fd
       xclip

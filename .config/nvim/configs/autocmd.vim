@@ -10,9 +10,6 @@ AutoCmd BufLeave * if !&diff | let b:winview = winsaveview() | endif
 AutoCmd BufEnter * if exists('b:winview') && !&diff | call winrestview(b:winview) |
       \ unlet! b:winview | endif
 
-
-AutoCmd User NERDTreeInit call autocmds#attempt_select_last_file()
-
 function! s:hl()
   echo join(map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")'), '/')
 endfunction

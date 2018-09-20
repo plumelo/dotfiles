@@ -34,6 +34,7 @@ in {
       # office
       libreoffice-fresh
       unoconv
+      zathura
 
       # browsers
       firefox
@@ -61,7 +62,8 @@ in {
       # editors
       atom
       (native editorconfig-core-c)
-      (native vim)
+      # (native vim)
+      (import ../vim/vim.nix)
       vim-vint
       (native neovim)
       python27Packages.neovim
@@ -76,12 +78,15 @@ in {
       # file managers
       filezilla
       vifm
+      mc
       ranger
 
       # langs
       (native nodejs-8_x)
       (native ruby)
       yarn
+      python27Full
+      python36Full
 
       # misc
       (native keepassxc)

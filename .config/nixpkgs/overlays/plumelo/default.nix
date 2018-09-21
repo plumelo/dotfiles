@@ -13,6 +13,7 @@ in {
       (native zip)
       (native ctags)
       unrar
+      unzip
       fd
       xclip
       gnumake
@@ -72,14 +73,12 @@ in {
       python27Packages.flake8
       python36Packages.flake8
 
-      # terminals
-      termite
-
       # file managers
       filezilla
       vifm
       mc
       ranger
+      fzf
 
       # langs
       (native nodejs-8_x)
@@ -111,8 +110,8 @@ in {
 
       # sway
       termite
+      w3m
       i3blocks
-      polybar
       pavucontrol
       imv
       mpg123

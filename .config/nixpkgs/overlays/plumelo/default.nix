@@ -35,7 +35,6 @@ in {
       # office
       libreoffice-fresh
       unoconv
-      zathura
 
       # browsers
       firefox

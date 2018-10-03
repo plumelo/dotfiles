@@ -11,6 +11,7 @@ in {
       p7zip
       (native unzip)
       (native zip)
+      (native ctags)
       unrar
       fd
       xclip

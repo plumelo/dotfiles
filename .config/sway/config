@@ -84,6 +84,16 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+set $sysmenu "system: [l]ogout  [p]oweroff  [r]eboot"
+bindsym $mod+Shift+e mode $sysmenu
+
+mode $sysmenu {
+    bindsym l         exit
+    bindsym p         exec shutdown -P now
+    bindsym r         exec shutdown -r now
+    bindsym Return    mode "default"
+    bindsym Escape    mode "default"
+}
 # split in horizontal orientation
 bindsym $mod+h split h
 # split in vertical orientation
@@ -105,10 +115,6 @@ bindsym $mod+t scratchpad show
 bindsym $mod+b border toggle
 # reload the configuration file
 bindsym $mod+Shift+c reload
-# restart inplace (preserves your layout/session)
-bindsym $mod+Shift+r restart
-# exit i3 with mod+shift+e
-bindsym $mod+Shift+e exit
 # Run terminal with mod+enter
 bindsym $mod+Return exec $term
 # Lock
@@ -118,10 +124,21 @@ bindsym Print exec grim ~/screenshot.png
 # dmenu with mod+d for arbituary programs
 bindsym $mod+d exec $menu
 
+# Open applications on specific workspaces
+# assign [class="Chromium"] $ws1
+# assign [class="Termite"] $ws2
+
+# Open specific applications in floating mode
+for_window [title="htop"] floating enable border pixel 1
+
+# Start Applications
+bindsym $mod+Ctrl+b exec termite -e 'htop'
+bindsym $mod+Ctrl+r 			exec $term -e ranger
+
 #default_floating_border none
 #hide_edge_borders both
 gaps edge_gaps off
-gaps inner 3
+gaps inner 2
 gaps outer 3
 smart_gaps on
 default_border pixel 1
@@ -147,6 +164,7 @@ set $base0F #be5046
 # Status Bar:
 bar {
   position bottom
+  # tray_output XWAYLAND0
     status_command i3blocks -c ~/.config/sway/blocks.conf
     colors {
       background $base00

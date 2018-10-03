@@ -31,7 +31,7 @@ set shiftwidth=2
 set shiftround
 set inccommand=nosplit
 set updatetime=750
-set list listchars=tab:▸\ ,eol:¬,trail:~,space:·,extends:»,precedes:«,nbsp:⦸
+set list listchars=tab:▷\ ,trail:◦,space:·,extends:»,precedes:«,nbsp:⦸
 set statusline=
 set statusline+=%(%{'help'!=&filetype?'\ \ '.bufnr('%'):''}\ %)
 set statusline+=%{fugitive#head()!=''?'\ \ '.fugitive#head().'\ ':''}

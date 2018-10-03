@@ -1,4 +1,7 @@
 function pack_delayed#plugins(...)
+  packadd supertab
+  packadd vim-tmpbuffer
+  packadd terminus
   packadd vim-jsx-improve
   packadd nerdtree
   packadd LargeFile

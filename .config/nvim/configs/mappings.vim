@@ -19,7 +19,9 @@ cnoremap <C-e> <End>
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
 nnoremap <Space>s :%s//<left>
+vnoremap <Space>s :s//<left>
 nnoremap <Leader>r :%s/\<<C-r><C-w>\>/<C-r><C-w>
+vnoremap <Leader>r :s/\<<C-r><C-w>\>/<C-r><C-w>
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 nnoremap <space><space> :tabnew %<CR>
 nnoremap <space>q :tabclose<CR>
@@ -29,6 +31,5 @@ nnoremap <Space>P :put!+<CR>
 vnoremap <Space>y "+y
 vnoremap <Space>p "+p
 vnoremap <Space>P "+P
-inoremap <C-v> <C-R>+
-nnoremap <silent> <Leader>= :vertical resize +1<CR>
-nnoremap <silent> <Leader>- :vertical resize -1<CR>
+nnoremap n nzzzv
+nnoremap N Nzzzv

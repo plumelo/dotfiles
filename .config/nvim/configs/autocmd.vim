@@ -16,3 +16,7 @@ endfunction
 command! HL call <SID>hl()
 
 command! SP %s/\s\+$//e | normal! ``
+if !exists(':DiffOrig')
+  command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
+        \ | wincmd p | diffthis
+endif

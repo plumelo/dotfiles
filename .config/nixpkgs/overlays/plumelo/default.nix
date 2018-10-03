@@ -13,13 +13,14 @@ in {
       (native zip)
       (native ctags)
       unrar
-      unzip
       fd
       xclip
       gnumake
       nerdfonts
       ntfs3g
       usbutils
+      glxinfo
+      pcutils
 
       # monitoring
       python27Packages.glances

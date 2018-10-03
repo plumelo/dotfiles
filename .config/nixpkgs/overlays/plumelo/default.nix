@@ -9,13 +9,15 @@ in {
       (native ag)
       ripgrep
       p7zip
-      unzip
+      (native unzip)
+      (native zip)
       unrar
       fd
       xclip
       gnumake
       nerdfonts
       ntfs3g
+      usbutils
 
       # monitoring
       python27Packages.glances
@@ -99,6 +101,8 @@ in {
       i3blocks
       polybar
       pavucontrol
+      imv
+      mpg123
     ];
   };
 }

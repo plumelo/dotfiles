@@ -1,5 +1,6 @@
 # i3 config file
 set $mod Mod4
+set $sup Mod1
 set $term termite
 set $menu j4-dmenu-desktop
 
@@ -123,6 +124,10 @@ bindsym $mod+Control+l exec grim /tmp/lock.png &&  mogrify -scale 10% -scale 100
 bindsym Print exec grim ~/screenshot.png
 # dmenu with mod+d for arbituary programs
 bindsym $mod+d exec $menu
+# switch between two workspaces
+bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Tab                workspace prev
+bindsym $mod+Shift+Tab          workspace next
 
 # Open applications on specific workspaces
 # assign [class="Chromium"] $ws1

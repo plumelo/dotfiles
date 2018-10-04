@@ -3,6 +3,8 @@
 # font = Ubuntu Mono 10
 font = DejaVuSansMono 10
 allow_bold = true
+scrollback_lines = -1
+clickable_url = false
 
 [colors]
 foreground          = #abb2bf
@@ -48,3 +50,5 @@ color16 = #353b45
 color17 = #3e4451
 color18 = #565c64
 color19 = #b6bdca
+
+# vim: ft=dosini cms=#%s

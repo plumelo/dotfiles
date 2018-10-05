@@ -20,7 +20,7 @@ in {
       ntfs3g
       usbutils
       glxinfo
-      pcutils
+      pciutils
 
       # monitoring
       python27Packages.glances
@@ -63,8 +63,9 @@ in {
       # editors
       atom
       (native editorconfig-core-c)
-      # (native vim)
-      (import ../vim/vim.nix)
+      # (native vim-configured)
+      myvim
+      # (native import ../vim/vim.nix)
       vim-vint
       (native neovim)
       python27Packages.neovim

@@ -2,15 +2,13 @@
 set $mod Mod4
 set $sup Mod1
 set $term termite
-set $menu j4-dmenu-desktop
+# set $menu j4-dmenu-desktop
+# set $menu bemenu-run --fn DejaVu-20
+set $menu env BEMENU_BACKEND=wayland bemenu-run --fn 'DejaVu 14' --sb '#b8bb26' --nb '#303030' --nf '#ebdbb2' --sf '#1f1f1f' -l 10 -m DVI-D-1
+bindsym $mod+m exec termite --class "fzf-menu" --geometry 640x480 -e /home/vasy/.config/sway/fzf-menu for_window [class="^fzf-menu$"] floating enable
 
 font pango: InconsolataGo Nerd Font 9
 
-# Output configuration
-output * bg ~/.config/sway/wallpaper_2560x1080.jpg fill
-output "Goldstar Company Ltd LG ULTRAWIDE 0x0000B7AA" bg ~/.config/sway/wallpaper_2560x1080.jpg fill
-output eDP-1 scale 1
-output "Samsung Electric Company SAMSUNG 0x00000100" scale 2
 # input
 input "2:14:ETPS/2_Elantech_Touchpad" {
   dwt enabled
@@ -30,6 +28,14 @@ input "2:14:ETPS/2_Elantech_Touchpad" {
   set $ws8 "8 "
   set $ws9 "9 "
   set $ws10 "10 "
+
+# Output configuration
+output * bg ~/.config/sway/wallpaper_2560x1080.jpg fill
+# output "Goldstar Company Ltd W2486 0x00001FAG" bg ~/.config/sway/wallpaper_2560x1080.jpg fill
+# output DVI-D-1 scale 1
+output "Samsung Electric Company S22B300 0x00003337"
+output "Goldstar Company Ltd W2486 0x00001FA6"
+
 # Meta key bindings
 # Move window with mod+mouse drag
   floating_modifier $mod
@@ -134,7 +140,7 @@ bindsym $mod+Shift+Tab          workspace next
 # assign [class="Termite"] $ws2
 
 # Open specific applications in floating mode
-for_window [title="htop"] floating enable border pixel 1
+for_window [instance="htop"] floating enable border pixel 1
 
 # Start Applications
 bindsym $mod+Ctrl+b exec $term -e 'htop'

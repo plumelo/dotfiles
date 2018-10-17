@@ -59,6 +59,7 @@ in {
 
       # accounting
       ledger
+      # alacritty
 
       # editors
       atom
@@ -68,8 +69,6 @@ in {
       # (native import ../vim/vim.nix)
       vim-vint
       (native neovim)
-      python27Packages.neovim
-      python36Packages.neovim
       python27Packages.yamllint
       python27Packages.flake8
       python36Packages.flake8
@@ -80,6 +79,7 @@ in {
       mc
       ranger
       fzf
+      fzf.out
 
       # langs
       (native nodejs-8_x)
@@ -110,6 +110,8 @@ in {
       distrobuilder
 
       # sway
+      bemenu
+      wterm
       termite
       w3m
       i3blocks

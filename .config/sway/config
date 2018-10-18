@@ -5,7 +5,7 @@ set $down j
 set $up k
 set $right l
 set $term termite
-set $menu dmenu_run
+set $menu termite --name "fzf-menu" -e "bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'"
 
 # Output configuration
 output * bg ~/.config/sway/wallpaper.jpg fill
@@ -20,8 +20,8 @@ input "2:14:ETPS/2_Elantech_Touchpad" {
   middle_emulation enabled
 }
 
+
 # Basics:
-#floating_modifier $mod normal
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec $menu
@@ -133,6 +133,7 @@ gaps inner 3
 gaps outer 0
 smart_gaps on
 default_border pixel 1
+default_floating_border pixel 1
 
 font pango: InconsolataGo Nerd Font
 
@@ -180,3 +181,6 @@ client.urgent           $base08 $base08 $base00 $base08 $base08
 #client.background       $base07
 
 exec --no-startup-id mako --default-timeout 10000
+
+#Window clases
+for_window [app_id="^fzf-menu$"] floating enable

@@ -21,7 +21,7 @@ function! NerdTreeBuffer()
   call b:NERDTree.render()
   call l:node.putCursorHere(1, 0)
 endfunction
-nnoremap <silent> = :call NerdTreeBuffer()<CR>
+nnoremap <silent> =- :call NerdTreeBuffer()<CR>
 
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeMouseMode = 2

@@ -7,13 +7,15 @@ in {
     paths = [
       #general
       (native ag)
-      ripgrep
-      p7zip
+      (native ripgrep)
+      (native fd)
+      (native p7zip)
       (native unzip)
       (native zip)
       (native ctags)
-      unrar
-      fd
+      (native unrar)
+      fzf
+      fzf.out
       xclip
       gnumake
       nerdfonts
@@ -63,8 +65,6 @@ in {
       (native vim)
       vim-vint
       (native neovim)
-      python27Packages.neovim
-      python36Packages.neovim
       python27Packages.yamllint
 
       # langs

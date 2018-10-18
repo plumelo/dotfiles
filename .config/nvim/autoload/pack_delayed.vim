@@ -16,7 +16,6 @@ function pack_delayed#plugins(...)
   packadd neoformat
   packadd neoranger
   packadd cmdline-completion
-  packadd QuickBuf
   packadd vim-gutentags
   packadd ale
 endfunction

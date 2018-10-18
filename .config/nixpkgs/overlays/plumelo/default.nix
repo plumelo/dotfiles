@@ -19,6 +19,8 @@ in {
       nerdfonts
       ntfs3g
       usbutils
+      glxinfo
+      pciutils
 
       # monitoring
       python27Packages.glances
@@ -43,6 +45,7 @@ in {
       epiphany
 
       # communication
+      neomutt
       slack
       skypeforlinux
       libnotify
@@ -56,20 +59,34 @@ in {
 
       # accounting
       ledger
+      # alacritty
 
       # editors
       atom
       (native editorconfig-core-c)
-      (native vim)
+      # (native vim-configured)
+      myvim
+      # (native import ../vim/vim.nix)
       vim-vint
       (native neovim)
-      python27Packages.neovim
-      python36Packages.neovim
       python27Packages.yamllint
+      python27Packages.flake8
+      python36Packages.flake8
+
+      # file managers
+      filezilla
+      vifm
+      mc
+      ranger
+      fzf
+      fzf.out
 
       # langs
       (native nodejs-8_x)
       (native ruby)
+      yarn
+      python27Full
+      python36Full
 
       # misc
       (native keepassxc)
@@ -77,13 +94,13 @@ in {
       transmission_gtk
       stress
       glmark2
-      
+
       # git
       (native gitAndTools.tig)
       (native git-lfs)
       (native git)
       gitkraken
-
+      gitAndTools.diff-so-fancy
       # configuration management
       vagrant_2
       redir
@@ -92,15 +109,12 @@ in {
       avocode
       distrobuilder
 
-      #files
-      filezilla
-      ranger
-      vifm
-
       # sway
+      bemenu
+      wterm
       termite
+      w3m
       i3blocks
-      polybar
       pavucontrol
       imv
       mpg123

@@ -1,4 +1,0 @@
-{pkgs}:
-{
-  allowUnfree = true;
-}

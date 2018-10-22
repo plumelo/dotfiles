@@ -1,20 +1,27 @@
 scriptencoding utf-8
 
-if !empty(glob('~/.nix-profile/share/vim-plugins/fzf*'))
-  set runtimepath+=~/.nix-profile/share/vim-plugins/fzf*/
-endif
+" if !empty(glob('~/.nix-profile/share/vim-plugins/fzf*'))
+"   set runtimepath+=~/.nix-profile/share/vim-plugins/fzf*/
+" endif
 
 " let $FZF_DEFAULT_COMMAND = 'ag -g "" --hidden'
 let $FZF_DEFAULT_OPTS='--ansi --layout reverse'
 let g:fzf_layout = { 'down': '15' }
+let g:_fzf_command = 'fd --type file --follow --hidden --exclude .git'
 
 function! FZFD()
-  let $FZF_DEFAULT_COMMAND = 'fd --type file --follow --hidden --exclude .git'
+  let $FZF_DEFAULT_COMMAND = g:_fzf_command
   FZF
 endfunction
 
 command! F call FZFD()
 nnoremap <silent> <C-p> :F<CR>
+
+function! FZFL()
+  let $FZF_DEFAULT_COMMAND = g:_fzf_command
+  FZF %:h
+endfunction
+command! FZFL call FZFL()
 
 function! FZFDA()
   let $FZF_DEFAULT_COMMAND='fd -HI'
